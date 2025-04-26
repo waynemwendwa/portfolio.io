@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Services</title>
+  <script src="https://kit.fontawesome.com/db7e1c890b.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a73e8;
+      color: white;
+      padding: 20px 20px;
+      text-align: center;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #1a73e8;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    .service-card:hover{
+        box-shadow: 0 6px 20px rgba(5, 5, 250, 0.8);
+        transition: box-shadow 0.3s ease;
+        font-size: 20px;
+    }
+    .service-card h3 {
+      margin-top: 0;
+      color: #1a73e8;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(5, 5, 250, 0.8);
+      margin-top: 60px;
+    }
+
+    input, button {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      background-color: #e0f3f9;
+    }
+    textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: none;
+      outline: none;
+      border-radius: 20px;
+      font-size: 1rem;
+      background-color: #e0f3f9;
+    }
+    input:focus, textarea:focus {
+      border: 3px solid #1a73e8;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(26, 115, 232, 0.5);
+    }
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #155cc0;
+    }
+
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+    .social-icons i{
+        margin-right: 10px;
+        color: #1a73e8;
+        font-size: 25px;
+    }
+    .social-icons i:hover{
+        color: white;
+        transition: 0.2s;
+    }
+    .social-icons a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+    .icons{
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .icons i{
+            margin-right: 10px;
+            color: beige;
+            font-size: 25px;
+        }
+        .icons i:hover{
+            color: black;
+            transition: 0.2s;
+        }
+        .icons a{
+            text-decoration: none;
+            color: beige;
+            margin-right: 20px;
+            font-size: 10px;
+            padding: 10px 10px;
+            letter-spacing: 2px;
+        }
+        .icons a:hover{
+            color: black;
+            transition: 0.2s;
+        }
+        hr{
+          border: none;
+          border-radius: 8px; 
+          height: 10px;
+          background-color: #1a73e8;
+        }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="icons">
+        <i class="fa-solid fa-house" ><a href="home.html">Home</a></i>
+        <i class="fa-solid fa-circle-info" ><a href="about.html">About</a></i>
+        <i class="fa-solid fa-gears"><a href="services.html">Services</a></i>
+    </div>
+    <h1>My Services</h1>
+    <p>What I can do for you</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="service-card">
+        <marquee behavior="" direction=""><h3>Full-Stack Web Development</h3></marquee>
+        <p>I build responsive, scalable, and user-friendly web applications from frontend to backend.</p>
+      </div>
+      <div class="service-card">
+        <marquee behavior="" direction=""><h3>Mobile App Development</h3></marquee>
+        <p>Cross-platform mobile apps built with kotlin for Android.</p>
+      </div>
+      <div class="service-card">
+        <marquee behavior="" direction=""><h3>Graphics & UI/UX Design</h3></marquee>
+        <p>Modern, clean, and creative visuals for branding, websites, and app interfaces.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h2>Get in Touch</h2>
+      <hr>
+      <form action="https://api.web3forms.com/submit" method="POST" >
+        <input type="hidden" name="access_key" value="63f18826-dddb-48f2-ba99-d5e75b5dd7a9">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required/>
+        <input type="email" name="email" placeholder="Your Email: example@gmail.com" required/>
+        <textarea name="message" rows="5" cols="3" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Let's connect on social media:</p>
+    <div class="social-icons">
+        <i class="fa-brands fa-github"><a href="https://github.com/waynemwendwa" target="_blank">waynemwendwa</a></i>
+        <i class="fa-brands fa-whatsapp"><a >+254 799514443</a></i>
+        <i class="fa-brands fa-x-twitter"><a href="https://twitter.com/Him" target="_blank">Him</a></i>
+        <i class="fa-brands fa-google"><a href="mailto:waynemwendwa04@gmail.com" target="_blank">waynemwendwa04@gmail.com</a></i>
+    </div>
+    <p>&copy; 2025 Wayne Mwendwa. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
